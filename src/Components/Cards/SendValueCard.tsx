@@ -1,6 +1,7 @@
 import React, {ChangeEvent, FormEvent, useState} from "react";
 import BlackButtonWhiteOutline from "../Buttons/BlackButtonWhiteOutline";
 import axios from "axios";
+import {yourIp} from "../Pages/Home";
 
 type numberCounter = {
     "setSubmitCounter": () => void
@@ -8,7 +9,8 @@ type numberCounter = {
 
 
 const SendValueCard = (props: numberCounter) => {
-    const url = "http://localhost:8080/savetoboard"
+
+    const url = `http://${yourIp}:8080/savetoboard`
 
     const [value, setValue] = useState("0")
     const [pinId, setPinId] = useState("")

@@ -1,10 +1,8 @@
-import React, {useReducer, useState} from "react";
-import DefaultCard from "../Cards/DefaultCard";
+import React, {useState} from "react";
 import SendValueCard from "../Cards/SendValueCard";
 import Board from "../ESP Board/Board";
 
-
-
+export const yourIp = ""
 
 
 const Home = () => {
@@ -21,7 +19,7 @@ const Home = () => {
             <div className={"p-4 grid sm:grid-cols-2 lg:grid-cols-4 pb-20"}>
 
                 <div className={"p-4"}>
-                    <SendValueCard setSubmitCounter={()=>incrementCounter()}></SendValueCard>
+                    <SendValueCard setSubmitCounter={() => incrementCounter()}></SendValueCard>
                 </div>
 
                 <div className={"p-4 text-white"}>
@@ -29,9 +27,6 @@ const Home = () => {
                     <Board submitCounter={submitCounter}></Board>
                 </div>
             </div>
-
-
-
 
 
         </div>

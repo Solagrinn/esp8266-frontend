@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Pin from "./Pin";
 import axios from "axios";
+import {yourIp} from "../Pages/Home";
 
 
 interface Pin {
@@ -10,13 +11,13 @@ interface Pin {
 }
 
 interface submitCount {
-    "submitCounter":number
+    "submitCounter": number
 }
 
 
-const getUrl = "http://localhost:8080/getboard"
+const getUrl = `http://${yourIp}:8080/getboard`
 
-const Board = (props : submitCount) => {
+const Board = (props: submitCount) => {
 
     const initialPinData: Pin[] = [
         {id: "1", pinName: "D0", value: "0"},
@@ -54,9 +55,6 @@ const Board = (props : submitCount) => {
             })
             .catch(error => console.log(error));
     }
-
-
-
 
 
     useEffect(() => {
