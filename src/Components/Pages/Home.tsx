@@ -3,8 +3,6 @@ import SendValueCard from "../Cards/SendValueCard";
 import Board from "../ESP Board/Board";
 
 
-
-
 const Home = () => {
 
     const [submitCounter, setSubmitCounter] = useState(0)
@@ -15,19 +13,21 @@ const Home = () => {
     }
 
     return (
-        <div className={"w-full h-screen  bg-black "}>
-            <div className={"grid sm:grid-cols-2 lg:grid-cols-4 "}>
+        <div className={"w-full h-full  bg-black "}>
+            <div className={"p-2"}>
 
-                <div className={"p-4"}>
-                    <SendValueCard setSubmitCounter={() => incrementCounter()}></SendValueCard>
-                </div>
+                <div className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 "}>
 
-                <div className={"p-4 text-white"}>
-                    Esp-8266 Board
-                    <Board submitCounter={submitCounter}></Board>
+                    <div className={"p-4"}>
+                        <SendValueCard setSubmitCounter={() => incrementCounter()}></SendValueCard>
+                    </div>
+
+                    <div className={"p-4 text-white"}>
+                        Esp-8266 Board
+                        <Board submitCounter={submitCounter}></Board>
+                    </div>
                 </div>
             </div>
-
 
         </div>
     )

@@ -69,7 +69,7 @@ const Board = (props: submitCount) => {
     return (
 
         <div className={"pt-4 pl-4 pr-4"}>
-            <div className={"w-[350px]  bg-[#333] rounded-xl "}>
+            <div className={" max-w-[350px]  bg-[#333] rounded-xl "}>
 
                 {pinData.map(pin => (
                     <Pin

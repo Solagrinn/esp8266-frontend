@@ -55,7 +55,7 @@ const SendValueCard = (props: numberCounter) => {
 
     return (
         <div
-            className={"bg-[#333] text-white rounded-3xl p-4  grid place-items-center sm:max-w-[304px]  outline outline-1 outline-[#4f4f4f] w-full "}>
+            className={"bg-[#333] text-white rounded-3xl p-4  grid place-items-center w-full sm:max-w-[304px]  outline outline-1 outline-[#4f4f4f]  "}>
 
 
             <form className={"grid place-items-center"} onSubmit={submitHandler}>
