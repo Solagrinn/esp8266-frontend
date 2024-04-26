@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FormEvent, useState} from "react";
 import BlackButtonWhiteOutline from "../Buttons/BlackButtonWhiteOutline";
 import axios from "axios";
-import {yourIp} from "../../index";
+import {yourIp} from "../../YourIp";
 
 type numberCounter = {
     "setSubmitCounter": () => void

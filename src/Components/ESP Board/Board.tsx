@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Pin from "./Pin";
 import axios from "axios";
-import {yourIp} from "../../index";
+import {yourIp} from "../../YourIp";
 
 
 interface Pin {
