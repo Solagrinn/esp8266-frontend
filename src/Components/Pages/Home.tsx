@@ -15,8 +15,8 @@ const Home = () => {
     }
 
     return (
-        <div className={"w-full h-full  bg-black "}>
-            <div className={"p-4 grid sm:grid-cols-2 lg:grid-cols-4 pb-20"}>
+        <div className={"w-full h-screen  bg-black "}>
+            <div className={"grid sm:grid-cols-2 lg:grid-cols-4 "}>
 
                 <div className={"p-4"}>
                     <SendValueCard setSubmitCounter={() => incrementCounter()}></SendValueCard>
