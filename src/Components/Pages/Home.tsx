@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SendValueCard from "../Cards/SendValueCard";
 import Board from "../ESP Board/Board";
 
-export const yourIp = ""
+
 
 
 const Home = () => {
