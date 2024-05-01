@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
-import Pin from "./Pin";
+
 import axios from "axios";
 import {yourIp} from "../../YourIp";
+import Pin from "./Pin";
 
-
-interface Pin {
+export interface PinInterface {
     id: string;
     value: string;
     pinName: string;
@@ -19,7 +19,7 @@ const getUrl = `http://${yourIp}:8080/getboard`
 
 const Board = (props: submitCount) => {
 
-    const initialPinData: Pin[] = [
+    const initialPinData: PinInterface[] = [
         {id: "1", pinName: "D0", value: "0"},
         {id: "2", pinName: "D1", value: "0"},
         {id: "3", pinName: "D2", value: "0"},
@@ -43,7 +43,7 @@ const Board = (props: submitCount) => {
         axios.get(getUrl)
             .then(response => {
                 console.log(response.data)
-                const pinArray: Pin[] = Object.keys(response.data.pins).map(key => ({
+                const pinArray: PinInterface[] = Object.keys(response.data.pins).map(key => ({
                     id: key,
                     value: response.data.pins[key].value,
                     pinName: response.data.pins[key].pinName

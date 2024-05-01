@@ -28,3 +28,4 @@ const Pin = (props: pinVariables) => {
 }
 
 export default Pin
+

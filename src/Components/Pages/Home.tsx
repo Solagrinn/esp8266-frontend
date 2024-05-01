@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import SendValueCard from "../Cards/SendValueCard";
 import Board from "../ESP Board/Board";
+import ChainLatencyCard from "../Advanced/ChainLatencyCard";
 
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
     }
 
     return (
-        <div className={"w-full h-full  bg-black "}>
+        <div className={"w-full h-full min-h-screen bg-black "}>
             <div className={"p-2"}>
 
                 <div className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 "}>
@@ -25,6 +26,11 @@ const Home = () => {
                     <div className={"p-4 text-white"}>
                         Esp-8266 Board
                         <Board submitCounter={submitCounter}></Board>
+                    </div>
+
+                    <div>
+                        <ChainLatencyCard></ChainLatencyCard>
+
                     </div>
                 </div>
             </div>
